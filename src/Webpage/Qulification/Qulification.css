@@ -1,0 +1,111 @@
+.qualification-section {
+  padding: 80px 0;
+  background: linear-gradient(to right, #020617, #0f172a);
+  color: #fff;
+}
+
+/* Titles */
+.subtitle {
+  text-align: center;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #38bdf8;
+}
+
+/* Item */
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 40px;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  background: #38bdf8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Card */
+.timeline-content {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: #334155;
+}
+
+/* Text */
+.duration {
+  font-size: 13px;
+  color: #38bdf8;
+}
+
+.degree {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.college-name {
+  color: #cbd5e1;
+}
+
+/* Score Badge */
+.score-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #38bdf8;
+  color: #000;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+}

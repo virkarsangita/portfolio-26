@@ -1,0 +1,79 @@
+/* Header */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Container */
+.navbar-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Logo */
+.logo h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 15px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+/* Active Link */
+.nav-links li.active a {
+  color: #38bdf8;
+}
+
+/* Underline Animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li.active a::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* next level madhe hamburger add karu */
+  }
+}
