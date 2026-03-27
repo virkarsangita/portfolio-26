@@ -29,6 +29,13 @@
   color: #38bdf8;
 }
 
+.logo-text{
+   background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff);
+  webkit-background-clip: text;
+  webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
 /* Links */
 .nav-links {
   list-style: none;
