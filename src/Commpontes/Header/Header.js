@@ -9,7 +9,7 @@ function Header() {
       <div className="navbar-container">
 
         <div className="logo">
-          <h2>MyPortfolio</h2>
+          <h2 className= "logo-text">MyPortfolio</h2>
         </div>
 
         <ul className="nav-links">
