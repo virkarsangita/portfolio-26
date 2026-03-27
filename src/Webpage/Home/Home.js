@@ -3,14 +3,14 @@ import './Home.css';
 import backgroundImage from '../../Asscets/Img/background.jpg' ; // your uploaded image path
 import Header from '../../Commpontes/Header/Header';
 
+
 function Home() {
   return<>
   <Header/>
   <div className='container-fluid'>
-     <div
-  className="home-container"
-  style={{ backgroundImage: `url(${backgroundImage})` }}
->
+     <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+
+
   <div className="overlay">
     <div className="home-content">
 
@@ -32,7 +32,7 @@ function Home() {
           View My Work
         </a>
 
-        <a href="#contact" className="btn btn-outline">
+        <a href="/Contact"  className="btn btn-outline">
           Contact Me
         </a>
       </div>

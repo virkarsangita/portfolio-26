@@ -9,7 +9,7 @@ function Header() {
       <div className="navbar-container">
 
         <div className="logo">
-          <h2 className= "logo-text">MyPortfolio</h2>
+          <h2 className="logo-text">MyPortfolio</h2>
         </div>
 
         <ul className="nav-links">
@@ -21,7 +21,7 @@ function Header() {
             <Link to="/About">About</Link>
           </li>
 
-          <li className={location.pathname === "/Skills" ? "active" : ""}>
+          <li className={location.pathname === "/skills" ? "active" : ""}>
             <Link to="/skills">Skills</Link>
           </li>
 
