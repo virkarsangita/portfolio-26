@@ -1,47 +1,50 @@
-import React from 'react';
-import './Home.css';
-import backgroundImage from '../../Asscets/Img/background.jpg' ; // your uploaded image path
-import Header from '../../Commpontes/Header/Header';
-
+import React from "react";
+import "./Home.css";
+import backgroundImage from "../../Asscets/Img/background.jpg";
+import Header from "../../Commpontes/Header/Header";
 
 function Home() {
-  return<>
-  <Header/>
-  <div className='container-fluid'>
-     <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+  return (
+    <>
+      <Header />
 
+      <section
+        className="home-container"
+  id="home"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})`, }}
+      >
+        <div className="overlay">
+          <div className="home-content">
 
-  <div className="overlay">
-    <div className="home-content">
+            <p className="intro">Hello, I'm</p>
 
-      <h5 className="intro">Hello, I'm</h5>
+            <h1>
+              Sangita <span>Virkar</span>
+            </h1>
 
-      <h1>
-        Sangita <span>Virkar</span>
-      </h1>
+            <h2 className="role">Frontend Developer</h2>
 
-      <h3 className="role">Frontend Developer</h3>
+            <p className="desc">
+              I create modern, responsive and user-friendly web experiences
+              using React.js and the latest frontend technologies.
+            </p>
 
-      <p className="desc">
-        I create responsive, modern and user-friendly web applications
-        using React.js and latest frontend technologies.
-      </p>
+            <div className="home-buttons">
+              <a href="#projects" className="btn primary">
+                🚀 View My Work
+              </a>
 
-      <div className="home-buttons">
-        <a href="#projects" className="btn">
-          View My Work
-        </a>
+              <a href="/contact" className="btn secondary">
+                📩 Contact Me
+              </a>
+            </div>
 
-        <a href="/Contact"  className="btn btn-outline">
-          Contact Me
-        </a>
-      </div>
-
-    </div>
-  </div>
-</div>
-    </div>
-  </>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default Home;

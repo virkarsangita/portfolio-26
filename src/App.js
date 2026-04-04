@@ -10,14 +10,11 @@ import {  Routes, Route } from "react-router-dom";
 function App() {
   return <>
   
-  <Routes>
-   <Route path='/' element={<Home/>}></Route>
-   <Route path='/About' element={<About/>}></Route>
-   <Route path='/Skills' element={<Skills/>}></Route>
-   <Route path='/qualification' element={<Qualification/>}></Route>
-   <Route path='/Contact' element={<Contact/>}></Route>
-   
-  </Routes>
+      <Home />
+      <About />
+      <Skills />
+      <Qualification />
+      <Contact />
   
   </>
 }

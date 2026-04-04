@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import Header from "../../Commpontes/Header/Header";
+import backgroundImage from '../../Asscets/Img/background.jpg';
 
 function Skills() {
   const skillsList = [
@@ -13,8 +13,11 @@ function Skills() {
   ];
 
   return <>
-    <Header/>
-    <div className="skills-section" id="skills">
+    <div className="skills-section" id="skills"
+    style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})`,
+          }}
+    >
   <div className="container">
 
     <h5 className="skills-subtitle">My Expertise</h5>

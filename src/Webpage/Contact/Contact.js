@@ -1,11 +1,15 @@
 import React from 'react';
 import './Contact.css';
-import Header from "../../Commpontes/Header/Header";
+import backgroundImage from '../../Asscets/Img/background.jpg';
 
 function Contact() {
   return <>
-      <Header />
-      <div className="contact-section" id="contact">
+      
+    <div className="contact-section" id="contact"
+    style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})`,
+  }}
+    >
   <div className="contact-container">
 
     {/* LEFT SIDE */}

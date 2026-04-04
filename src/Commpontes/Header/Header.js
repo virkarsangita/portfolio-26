@@ -1,41 +1,56 @@
-import './Header.css';
-import { Link, useLocation } from 'react-router-dom';
+
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   const location = useLocation();
+   const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark");
+  };
 
   return (
-    <div className="container-fluid header">
+    <header className="header">
       <div className="navbar-container">
 
+        {/* Logo */}
         <div className="logo">
           <h2 className="logo-text">MyPortfolio</h2>
         </div>
 
-        <ul className="nav-links">
-          <li className={location.pathname === "/" ? "active" : ""}>
-            <Link to="/">Home</Link>
-          </li>
+        {/* Nav Links */}
+       <ul className="nav-links">
+  <li>
+    <a href="#home">Home</a>
+  </li>
 
-          <li className={location.pathname === "/About" ? "active" : ""}>
-            <Link to="/About">About</Link>
-          </li>
+  <li>
+    <a href="#about">About</a>
+  </li>
 
-          <li className={location.pathname === "/skills" ? "active" : ""}>
-            <Link to="/skills">Skills</Link>
-          </li>
+  <li>
+    <a href="#skills">Skills</a>
+  </li>
 
-          <li className={location.pathname === "/Qualification" ? "active" : ""}>
-            <Link to="/Qualification">Qualification</Link>
-          </li>
+  <li>
+    <a href="#qualification">Qualification</a>
+  </li>
 
-          <li className={location.pathname === "/contact" ? "active" : ""}>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+  <li>
+    <a href="#contact">Contact</a>
+  </li>
+</ul>
+
+        {/* CTA Button */}
+       <button className="theme-btn" onClick={toggleTheme}>
+  {darkMode ? "🌙 Dark" : "🌞 Light"}
+</button>
 
       </div>
-    </div>
+    </header>
   );
 }
 

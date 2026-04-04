@@ -1,87 +1,150 @@
-/* Header */
+/* 🔥 HEADER BASE */
 .header {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(2, 6, 23, 0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #1e293b;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
 }
 
-/* Container */
+/* 🔥 DARK MODE HEADER */
+body.dark .header {
+  background: rgba(20, 20, 30, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 🔥 NAV CONTAINER */
 .navbar-container {
-  width: 90%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+
+  padding: 18px 70px;
 }
 
-/* Logo */
-.logo h2 {
-  color: #fff;
-  font-weight: bold;
+/* 🔥 LOGO */
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #00c6ff);
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 4s linear infinite;
 }
 
-.logo span {
-  color: #38bdf8;
+/* 🔥 LOGO ANIMATION */
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
 }
 
-.logo-text{
-   background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff);
-  webkit-background-clip: text;
-  webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-/* Links */
+/* 🔥 NAV LINKS */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 35px;
+  list-style: none;
 }
 
+/* 🔥 LINK STYLE */
 .nav-links li a {
-  text-decoration: none;
-  color: #cbd5e1;
-  font-size: 15px;
-  transition: 0.3s;
   position: relative;
+  text-decoration: none;
+
+  color: #444;
+  font-weight: 500;
+
+  transition: 0.3s;
 }
 
-/* Hover Effect */
+/* 🔥 HOVER COLOR */
 .nav-links li a:hover {
-  color: #38bdf8;
+  color: #6366f1;
 }
 
-/* Active Link */
-.nav-links li.active a {
-  color: #38bdf8;
-  
-}
-
-/* Underline Animation */
+/* 🔥 UNDERLINE ANIMATION */
 .nav-links li a::after {
-  content: '';
+  content: "";
   position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
   width: 0%;
   height: 2px;
-  left: 0;
-  bottom: -5px;
-  background: #38bdf8;
-  transition: 0.3s;
+
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+
+  transition: 0.3s ease;
 }
 
-.nav-links li a:hover::after,
-.nav-links li.active a::after {
+.nav-links li a:hover::after {
   width: 100%;
 }
 
-/* Responsive */
+/* 🔥 ACTIVE LINK */
+.nav-links .active a {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.nav-links .active a::after {
+  width: 100%;
+}
+
+/* 🔥 THEME BUTTON */
+.theme-btn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+/* 🔥 BUTTON HOVER */
+.theme-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+}
+
+/* 🔥 DARK MODE TEXT */
+body.dark .nav-links li a {
+  color: #ddd;
+}
+
+body.dark .nav-links li a:hover {
+  color: #8b5cf6;
+}
+
+/* 🔥 MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 15px 25px;
+  }
+
   .nav-links {
-    display: none; /* next level madhe hamburger add karu */
+    gap: 20px;
+  }
+
+  .logo-text {
+    font-size: 22px;
   }
 }

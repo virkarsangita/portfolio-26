@@ -1,6 +1,6 @@
 import React from "react";
 import './Qulification.css';
-import Header from "../../Commpontes/Header/Header";
+import backgroundImage from '../../Asscets/Img/background.jpg';
 
 function Qualification() {
   const educationData = [
@@ -25,8 +25,14 @@ function Qualification() {
   ];
 
   return<>
-  <Header/>
-    <div className="qualification-section" id="qualification">
+
+    <div className="qualification-section" id="qualification"
+     style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${backgroundImage})`,
+      }}
+    >
+
+      
       <div className="container">
         <h2 className="section-title">Education</h2>
         <div className="timeline">
