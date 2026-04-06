@@ -5,7 +5,7 @@ import About from './Webpage/About/About';
 import Skills from './Webpage/Skills/Skills';
 import Qualification from './Webpage/Qulification/Qulification';
 import Contact from './Webpage/Contact/Contact';
-import {  Routes, Route } from "react-router-dom";
+
 
 function App() {
   return <>

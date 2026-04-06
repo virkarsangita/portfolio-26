@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css'; 
 import profileImage from '../../Asscets/Img/profileImage.jpg';
-import Header from '../../Commpontes/Header/Header';
+
 import  backgroundImage from '../../Asscets/Img/background.jpg';
 
 function About() {
